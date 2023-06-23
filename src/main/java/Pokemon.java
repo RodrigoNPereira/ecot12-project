@@ -76,6 +76,10 @@ public abstract class Pokemon {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+
+	// public Pokemon callEvolution(){
+		
+	// }
 	
 	
 }

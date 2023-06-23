@@ -1,6 +1,11 @@
 public class HeldItem {
 	private int value;
 	private String effect;
+
+	public HeldItem(int value, String effect) {
+		this.value = value;
+		this.effect = effect;
+	}
 	
 	public int getValue() {
 		return value;
