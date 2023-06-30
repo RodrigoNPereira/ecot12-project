@@ -1,10 +1,10 @@
 
 public class Burn extends Status{
-	
+	private boolean burning;
 	
 	@Override
 	public void effect(Pokemon pokemon) {
-		// TODO Auto-generated method stub
-		
+		this.burning = true;
+		System.out.println("Your Pokemon is burning!");
 	}
 }

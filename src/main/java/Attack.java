@@ -19,5 +19,5 @@ public abstract class Attack{
         return power;
     }
 
-    public abstract void attack(Pokemon pokemon);
+    public abstract int attack(int health, int defense);
 }

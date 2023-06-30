@@ -1,14 +1,12 @@
-public class EggPichu extends Evolution {
-    private int timeToHatch;
-    private boolean hatch;
+public class EggPichu extends Pokemon {
 
-    public EggPichu(int timeToHatch, boolean hatch) {
-        this.timeToHatch = timeToHatch;
-        this.hatch = hatch;
+    public EggPichu(String name) {
+        super(name);
     }
 
     @Override
-    public void evolution(Pokemon p) {
-        // if timeToHatch == 0, evolve to Pichu
+    public Pichu callEvolution() {
+        System.out.println("The Egg has hatched!");
+        return new Pichu(this.getName());
     }
 }

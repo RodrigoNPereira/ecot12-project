@@ -2,23 +2,19 @@
 public abstract class Pokemon {
 	private String name;
 	private int health;
-	private int attacklvl;
-	private int specialAttack;
 	private int defense;
-	private int specialDefense;
-	private int speed;
-	
-	public Pokemon(String name, int health, int attacklvl, int specialAttack, int defense, int specialDefense, int speed) {
-	this.name = name;
-	this.health = health;
-	this.attacklvl = attacklvl;
-	this.specialAttack = specialAttack;
-	this.defense = defense;
-	this.specialDefense = specialDefense;
-	this.speed = speed;
+	private Region region;
+	private Ability ability;
+	private Attack attacks[] = new Attack[4];
+	private HeldItem item;
+	private Status status;
+	private Type type1;
+	private Type type2;
+
+	public Pokemon(String name) {
+		this.name = name;
 	}
 	
-	public abstract void Callattack();
 	public abstract Pokemon callEvolution();
 
 	public String getName() {
@@ -37,22 +33,6 @@ public abstract class Pokemon {
 		this.health = health;
 	}
 
-	public int getAttacklvl() {
-		return attacklvl;
-	}
-
-	public void setAttacklvl(int attacklvl) {
-		this.attacklvl = attacklvl;
-	}
-
-	public int getSpecialAttack() {
-		return specialAttack;
-	}
-
-	public void setSpecialAttack(int specialAttack) {
-		this.specialAttack = specialAttack;
-	}
-
 	public int getDefense() {
 		return defense;
 	}
@@ -61,25 +41,60 @@ public abstract class Pokemon {
 		this.defense = defense;
 	}
 
-	public int getSpecialDefense() {
-		return specialDefense;
+	public Region getRegion() {
+        return region;
+    }
+ 
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+	public Ability getAblity() {
+        return ability;
+     }
+ 
+     public void setAbility(Ability ability) {
+        this.ability = ability;
+    }
+
+	public Attack getAttack(int index) {
+		return this.attacks[index];
 	}
 
-	public void setSpecialDefense(int specialDefense) {
-		this.specialDefense = specialDefense;
+	public void setAttack(Attack attack, int index){
+		this.attacks[index] = attack;
 	}
 
-	public int getSpeed() {
-		return speed;
+	public HeldItem getItem(){
+		return this.item;
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setItem(HeldItem item){
+		this.item = item;
 	}
 
-	// public Pokemon callEvolution(){
-		
-	// }
-	
+	public Status getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Type getType1() {
+		return this.type1;
+	}
+
+	public void setType1(Type type1) {
+		this.type1 = type1;
+	}
+
+	public Type getType2() {
+		return this.type2;
+	}
+
+	public void setType2(Type type2) {
+		this.type2 = type2;
+	}
 	
 }

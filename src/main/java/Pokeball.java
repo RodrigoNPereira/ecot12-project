@@ -1,7 +1,8 @@
 public class Pokeball {
     private String name;
-    private int effectviness;
+    private float effectviness;
     private String sideEffect;
+    private Pokemon capture;
 
     public Pokeball(String name, int effectviness, String sideEffect) {
         this.name = name;
@@ -17,7 +18,7 @@ public class Pokeball {
         this.name = name;
     }
 
-    public int getEffectviness() {
+    public float getEffectviness() {
         return effectviness;
     }
 
@@ -31,5 +32,19 @@ public class Pokeball {
 
     public void setSideEffect(String sideEffect) {
         this.sideEffect = sideEffect;
+    }
+
+    public Pokemon getCapture() {
+        return capture;
+    }
+
+    public void capturePokemon(Pokemon pokemon) {
+        if(Math.random() <= this.effectviness/100){
+
+            this.capture = pokemon;
+            System.out.println("The Pokemon was captured!");
+        }else{
+            System.out.println(this.effectviness/100);
+        }
     }
 }

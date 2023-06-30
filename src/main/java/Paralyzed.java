@@ -10,6 +10,7 @@ public class Paralyzed extends Status{
 	@Override
 	public void effect(Pokemon pokemon) {
 		Random random = new Random();
-		mayAttack = random.nextBoolean(); // when the attack occours, it should virify if mayAttack is true, otherwise, the attack should not happen
+		mayAttack = random.nextBoolean();
+		System.out.println("Your Pokemon is paralyzed!");
 	}
 }

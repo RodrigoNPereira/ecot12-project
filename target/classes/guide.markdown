@@ -8,8 +8,6 @@
     * [x] Paralyzed
     * [x] Fainted
 
-- [] Trainer
-- [] KeyItem
 - [x] Pokeball
 - [x] HeldItem
 

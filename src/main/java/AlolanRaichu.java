@@ -1,7 +1,13 @@
-public class AlolanRaichu extends Evolution {
-    
+public class AlolanRaichu extends Pokemon {
+
+    public AlolanRaichu(String name) {
+        super(name);
+    }
+
     @Override
-    public void evolution(Pokemon p) {
-        // Create a EggPichu
+    public Pokemon callEvolution() {
+        System.out.println("There is a new Egg!");
+        return new EggPichu(this.getName());
+
     }
 }
