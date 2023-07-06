@@ -14,6 +14,8 @@ public class App {
         HeldItem alolanThunderstone = new HeldItem("Alolan Thunderstone", 15000, "Evolves Pikachu");
 
         Fainted fainted = new Fainted();
+        Burn burn = new Burn();
+        Paralyzed paralyzed = new Paralyzed();
 
         EggPichu pokemon1 = new EggPichu("Jazz");
         pokemon1.setType1(null);
@@ -54,8 +56,10 @@ public class App {
         while (true){
             int attackP1 = firePunch.attack(pokemon2.getHealth(), pokemon2.getDefense());
             pokemon2.setHealth(attackP1);
+            pokemon2.setStatus(burn);
             int attackP2 = spark.attack(pokemon1evolved3.getHealth(), pokemon1evolved2.getDefense());
             pokemon1evolved3.setHealth(attackP2);
+            pokemon1evolved3.setStatus(paralyzed);
             // System.out.println(attackP1 + " " + attackP2);
             System.out.println("Pokemon 1 health: "+pokemon1evolved3.getHealth()+" // Pokemon 2 health: "+pokemon2.getHealth());
             if(pokemon2.getHealth() <= 0 || pokemon1evolved3.getHealth() <= 0){
