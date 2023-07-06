@@ -9,4 +9,8 @@ public class Fainted extends Status{
 			unspawn = true;
 		}
 	}
+
+	public boolean getunspwn() {
+		return this.unspawn;
+	}
 }

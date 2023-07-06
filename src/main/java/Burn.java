@@ -7,4 +7,8 @@ public class Burn extends Status{
 		this.burning = true;
 		System.out.println("Your Pokemon is burning!");
 	}
+
+	public boolean getBurning() {
+		return this.burning;
+	}
 }
